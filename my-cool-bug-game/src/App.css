@@ -1,0 +1,88 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.App {
+  text-align: center;
+  background-color: #ADD8E6;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  color: black; /* Black text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  overflow: hidden; /* Hide overflow */
+  transition: background-color 0.25s ease; /* transition */
+}
+
+.App-header {
+  margin-top: 10px;
+}
+
+.Game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; 
+  justify-content: center; 
+  margin-bottom: 10px; 
+}
+
+.Bug-container img {
+  max-width: 512px;
+  max-height: 512px;
+  object-fit: contain;
+}
+
+button, input[type="text"] {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+.Score-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.Popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100; /* Forces above other content */
+}
+
+.Bug-container img {
+  width: 300px;  
+  height: 300px; 
+  object-fit: contain; 
+}
+
+/* confetti */
+
+@keyframes flash {
+  0%, 100% { background-color: red; }
+  14% { background-color: orange; }
+  28% { background-color: yellow; }
+  42% { background-color: green; }
+  56% { background-color: blue; }
+  70% { background-color: indigo; }
+  84% { background-color: violet; }
+}
+
+
+.explosion-effect {
+  animation: flash 1s linear infinite;
+}
+
